@@ -88,4 +88,13 @@ describe('ResetPasswordService', () => {
       }),
     ).rejects.toBeInstanceOf(AppError);
   });
+
+  it('should not be able to reset password with token invalid', async () => {
+    await expect(
+      resetPassword.execute({
+        token: '2f5188d4-c23a-47a9-81c4-da6f1aecea1c',
+        password: '222222',
+      }),
+    ).rejects.toBeInstanceOf(AppError);
+  });
 });
