@@ -1,5 +1,3 @@
-import { stringList } from 'aws-sdk/clients/datapipeline';
-
 interface IMailConfig {
   driver: 'ethereal' | 'ses';
 
